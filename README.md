@@ -1,4 +1,4 @@
-# 4-Wheel Drive Motor Control (Arduino & L293D) 🚗
+# 4-Wheel DC Motor Control (Arduino & L293D) 🚗
 
 This project is a practical application of embedded systems and robotics, demonstrating how to control a 4-wheel drive (4WD) chassis using an **Arduino Uno** and an **L293D Motor Driver IC**. The project executes a specific, pre-programmed, time-based movement sequence before automatically shutting down.
 
