@@ -1,0 +1,144 @@
+const int leftMotorForward = 10;
+
+const int leftMotorBackward = 9;
+
+
+
+const int rightMotorForward = 6;
+
+const int rightMotorBackward = 5;
+
+
+
+void setup() {
+
+  pinMode(leftMotorForward, OUTPUT);
+
+  pinMode(leftMotorBackward, OUTPUT);
+
+  pinMode(rightMotorForward, OUTPUT);
+
+  pinMode(rightMotorBackward, OUTPUT);
+
+}
+
+
+
+void loop() {
+
+  static bool isTaskCompleted = false;
+
+
+
+  if (!isTaskCompleted) {
+
+    moveForward();
+
+    delay(30000);
+
+
+
+    moveBackward();
+
+    delay(60000);
+
+
+
+    for (int i = 0; i < 2; i++) {
+
+      moveRight();
+
+      delay(15000);
+
+      moveLeft();
+
+      delay(15000);
+
+    }
+
+
+
+    stopMotors();
+
+    isTaskCompleted = true; 
+
+  }
+
+}
+
+
+
+
+
+void moveForward() {
+
+  digitalWrite(leftMotorForward, HIGH);
+
+  digitalWrite(leftMotorBackward, LOW);
+
+  digitalWrite(rightMotorForward, HIGH);
+
+  digitalWrite(rightMotorBackward, LOW);
+
+}
+
+
+
+void moveBackward() {
+
+  digitalWrite(leftMotorForward, LOW);
+
+  digitalWrite(leftMotorBackward, HIGH);
+
+  digitalWrite(rightMotorForward, LOW);
+
+  digitalWrite(rightMotorBackward, HIGH);
+
+}
+
+
+
+void moveRight() {
+
+
+
+  digitalWrite(leftMotorForward, HIGH);
+
+  digitalWrite(leftMotorBackward, LOW);
+
+  digitalWrite(rightMotorForward, LOW);
+
+  digitalWrite(rightMotorBackward, HIGH);
+
+}
+
+
+
+void moveLeft() {
+
+
+
+  digitalWrite(leftMotorForward, LOW);
+
+  digitalWrite(leftMotorBackward, HIGH);
+
+  digitalWrite(rightMotorForward, HIGH);
+
+  digitalWrite(rightMotorBackward, LOW);
+
+}
+
+
+
+void stopMotors() {
+
+  digitalWrite(leftMotorForward, LOW);
+
+  digitalWrite(leftMotorBackward, LOW);
+
+  digitalWrite(rightMotorForward, LOW);
+
+  digitalWrite(rightMotorBackward, LOW);
+
+} 
+
