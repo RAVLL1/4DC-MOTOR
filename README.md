@@ -12,7 +12,7 @@ Before running the code on physical hardware, the circuit was designed and simul
 4. Attached the L293D input pins to Arduino digital pins **10 & 9 (Left Motors)** and **6 & 5 (Right Motors)**.
 5. Implemented the C++ code to execute a sequence using basic `digitalWrite` logic combined with delays.
 
-<img width="100%" alt="L293D Motor Circuit Simulation" src="image_e4b51c.png" />
+<img width="100%" alt="L293D Motor Circuit Simulation" src="4DCmotor.png" />
 
 ---
 
